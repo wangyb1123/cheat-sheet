@@ -1,0 +1,11 @@
+git pull origin develop
+
+git stash
+git stash list
+git stash apply
+git stash pop
+git stash drop #stash_id#
+
+Create branch on git server
+git fetch
+git checkout my_branch
