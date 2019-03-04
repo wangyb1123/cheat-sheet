@@ -1,0 +1,27 @@
+Create topic
+kafka_2.11-1.1.0/bin/kafka-topics.sh --zookeeper zookeeper_server:2181  --create --topic my_topic --partitions 1 --replication-factor 1 --config cleanup.policy=delete --config retention.ms=86400000 --config message.timestamp.type=CreateTime
+
+Describe topic
+kafka_2.11-1.1.0/bin/kafka-configs.sh --zookeeper zookeeper_server:2181 --describe --entity-type topics --entity-name my_topic
+kafka_2.11-1.1.0/bin/kafka-topics.sh --describe --zookeeper zookeeper_server:2181 --topic my_topic
+
+Change topic configuration
+kafka_2.11-1.1.0/bin/kafka-topics.sh --zookeeper zookeeper_server:2181 --alter --topic my_topic --config cleanup.policy=delete, retention.ms=86400000, message.timestamp.type=CreateTime
+
+Get offset
+kafka_2.11-1.1.0/bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list kafkaserver:7070 --topic my_topic --time -1 --offsets 1
+
+Consume from topic
+kafka_2.11-1.1.0/bin/kafka-console-consumer.sh --bootstrap-server kafka_server:7070 --topic my_topic
+
+List all topics
+kafka_2.11-1.1.0/bin/kafka-topics.sh --zookeeper zookeeper_server:2181 --list
+
+Delete a topic
+kafka_2.11-1.1.0/bin/kafka-topics.sh --zookeeper zookeeper_server:2181 --delete --topic my_topic
+
+Send message from console
+kafka_2.11-1.1.0/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my_topic
+
+Send message from file
+kafka_2.11-1.1.0/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my_topic < file.log
