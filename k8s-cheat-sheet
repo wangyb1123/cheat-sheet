@@ -1,0 +1,17 @@
+kubectl get deployments --namespace=default
+kubectl delete deployments my-app
+
+# Get commands with basic output
+kubectl get services                          # List all services in the namespace
+kubectl get pods --all-namespaces             # List all pods in all namespaces
+kubectl get pods -o wide                      # List all pods in the namespace, with more details
+kubectl get deployment my-dep                 # List a particular deployment
+kubectl get pods --include-uninitialized      # List all pods in the namespace, including uninitialized ones
+
+# Describe commands with verbose output
+kubectl describe nodes my-node
+kubectl describe pods my-pod
+
+kubectl get services --sort-by=.metadata.name # List Services Sorted by Name
+
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
