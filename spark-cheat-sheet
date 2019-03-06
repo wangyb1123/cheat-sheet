@@ -1,0 +1,7 @@
+bin/run-example SparkPi 10
+
+sbin/start-master.sh
+sbin/stop-master.sh
+
+bin/spark-shell --master local[2]
+bin/spark-shell --master spark://sydawsapd01:7077
