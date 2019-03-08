@@ -1,0 +1,11 @@
+Log
+LogSegment --> FileRecords wrapper 
+FileRecords --> zero copy by FileChannel.transferTo()
+
+
+Acceptor  --> listen to socket, one acceptor can manage multiple socket endpoints
+Processor -> Acceptor delegate request to Processor, one Acceptor map to many processors
+KafkaRequestHandlerPool -> Processor delegate request to request handler thread pool
+KafkaRequestHandler -> handle all incoming request by using KafkaApis
+KafkaApis -> handle request
+RequestChannel  -> request and response
