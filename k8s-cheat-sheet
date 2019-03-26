@@ -1,5 +1,14 @@
 kubectl get deployments --namespace=default
+kubectl get deployment <deployment_name> --namespace=default
 kubectl delete deployments my-app
+
+kubectl get pods --namespace=default
+kubectl get pod <pod_name> --namespace=default
+kubectl describe pods <pod_name> --namespace=default
+kubectl logs <pod_name> --namespace=default
+
+kubectl exec -it <pod_name> --namespace=default -- /bin/bash
+
 
 # Get commands with basic output
 kubectl get services                          # List all services in the namespace
