@@ -1,0 +1,7 @@
+https://very-serio.us/2017/12/05/running-jvms-in-kubernetes/
+
+1.Use cgroup to allocate memory
+-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap
+
+2.Reserve more memory in request nd limit memory
+25% more than JVM size, e.g. for a JVM with 16GB, request memory should be 20GB and limit memory should be 24GB.
