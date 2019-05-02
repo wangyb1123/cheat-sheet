@@ -26,3 +26,7 @@ Make corrections to working tree files.
 Beware however that if you have added any new changes to the index, using commit --amend will add them to your previous commit.
 If the code is already pushed to your server and you have permissions to overwrite history (rebase) then:
 git push origin master --force
+
+
+Find Jiras which are not merged between branches
+git log --oneline --no-merges master...release/2018.07.03  | grep -o 'JIRADEMO-[0-9.]*' | sort | uniq
