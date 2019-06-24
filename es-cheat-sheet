@@ -1,0 +1,25 @@
+default port: 9200
+
+Cluster summary
+curl localhost:9200
+
+List all indexes
+curl -X GET "http://localhost:9200/_cat?indices?v"
+
+Get all records
+curl "localhost:9200/index/type/_search"
+curl "localhost:9200/accounts/person/_search"
+
+Search by criteria
+curl "localhost:9200/accounts/person/_search?q=person_name:user_a"
+
+curl 'localhost:9200/accounts/person/_search' -d '{
+"query" : {"match": {"person_name" : "user_a"} }
+}'
+
+Or criteria(user_a or user_b)
+curl 'localhost:9200/accounts/person/_search' -d '{
+"query" : {"match": {"person_name" : "user_a user_b"} }
+}'
+
+And crtieria
