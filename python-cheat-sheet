@@ -1,0 +1,13 @@
+1. Create virtual env
+py -3 -m venv [virtual env name]
+py -3 -m venv .venv
+
+2. Activate virtual env
+.venv\scripts\activate
+
+3. Install library:
+python -m pip --cert [certification_path] --proxy [proxy] install numpy
+e.g python -m pip --cert C:\ProgramData\cert\CA.cert --proxy http://proxy.com:8080 install numpy
+
+4. Deactivate virtual env
+deactivate
