@@ -1,1 +1,7 @@
 gradle clean build publishToMavenLocal
+
+List projects in a build
+gradle -q projects
+
+List tasks in a sub-project
+gradle :subproject:tasks
