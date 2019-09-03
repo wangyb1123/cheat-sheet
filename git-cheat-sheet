@@ -10,6 +10,14 @@ Create branch on git server
 git fetch
 git checkout my_branch
 
+Setup proxy:
+git config --global http.proxy
+git config --global https.proxy
+Disable proxy:
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+
 How to undo last commit: https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-commits-in-git
 git commit -m "Something terribly misguided"           # (1) 
 git reset HEAD~                                        # (2)
