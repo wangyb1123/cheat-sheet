@@ -24,3 +24,23 @@ kubectl describe pods my-pod
 kubectl get services --sort-by=.metadata.name # List Services Sorted by Name
 
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+# Docker
+docker image ls
+docker container ls
+docker container logs <container name>
+
+# Docker compose
+
+Build image:
+docker-compose -f docker-compose.build.yaml build
+Push to repo:
+docker-compose -f docker-compose.build.yaml push
+Build and recreate container:
+docker-compose up -d --force-recreate --build
+
+docker-compose ps
+docker-compose up -d
+docker-compose stop
+docker-compose rm
+docker exec -it <container> /bin/bash
