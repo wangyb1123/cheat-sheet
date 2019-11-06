@@ -19,6 +19,17 @@ ServerCnx.handleConnect(CommandConnect)
   authenticationProviderToken.newAuthState()   --> crate an authentication state with user identity
 
 
+Authorization on subscription
+ServerCnx.handleSubscribe(CommandSubscribe)
+  AuthorizationService.canConsumeAsync
+    AuthorizationProvider.canConsumeAsync
+
+Authorization on producer
+ServerCnx.handleSubscribe(CommandSubscribe)
+  AuthorizationService.canProduceAsync
+    AuthorizationProvider.canProduceAsync
+
+Authorization on policy update
 BrokerService.onUpdate()
   PersistentTopic/NonPersistentTopic.onPoliciesUpdate
     Consumer.checkPermissions
@@ -26,4 +37,3 @@ BrokerService.onUpdate()
         AuthorizationService.canConsumeAsync
           AuthorizationProvider.canConsumeAsync
 
-  
