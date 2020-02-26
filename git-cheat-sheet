@@ -41,6 +41,7 @@ git log --oneline --no-merges master...release/2018.07.03  | grep -o 'JIRADEMO-
 
 
 move a folder from one repo to another and keep its commit history
+http://st-on-it.blogspot.com/2010/01/how-to-move-folders-between-git.html
 # First of all you need to have a clean clone of the source repository so we didn't screw the things up.
 
 git clone git://server.com/my-repo1.git
