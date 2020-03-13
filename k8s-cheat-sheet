@@ -23,6 +23,9 @@ kubectl describe pods my-pod
 
 kubectl get services --sort-by=.metadata.name # List Services Sorted by Name
 
+copy file
+kubectl cp <some-pod>:/tmp/foo /tmp/bar
+
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
 # Docker
