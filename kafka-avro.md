@@ -8,5 +8,5 @@
 <a name="avro-serder"/>
 # Avro serder
 
-GenericAvroSerializer wraps KafkaAvroSerializer
-GenericAvroDeserializer wraps KafkaAvroDeserializer
+GenericAvroSerializer wraps KafkaAvroSerializer  
+GenericAvroDeserializer wraps KafkaAvroDeserializer  
