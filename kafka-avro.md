@@ -31,5 +31,17 @@ ReflectionAvroSerde
 
 KafkaAvroSerializer validate the schema when serializing, throw SerializationExeception when it is invalid
 
+# Kafka
+
+### How to choose number of partitions
+https://www.confluent.io/blog/how-choose-number-topics-partitions-kafka-cluster/
+https://www.confluent.io/blog/kafka-streams-tables-part-2-topics-partitions-and-storage-fundamentals/
+Tip: if in doubt, use 30 partitions per topic. This is a good number because (a) it is high enough to cover some really high-throughput requirements, (b) it is low enough that you will not hit the limit anytime soon of how many partitions a single broker can handle, even if you create many topics in your Kafka cluster, and (c) it is a highly composite number as it is evenly divisible by 1, 2, 3, 5, 6, 10, 15, and 30. This benefits the processing layer because it results in a more even workload distribution across application instances when horizontally scaling out (adding app instances) and scaling in (removing instances). Since Kafka supports hundreds of thousands of partitions in a cluster, this over-partitioning strategy is a safe approach for most users.
+
+# Kafka connect
+
+### build and extend docker image
+https://docs.confluent.io/platform/current/installation/docker/development.html#extending-images
+
 # Kafka community version vs confluent version
 https://docs.confluent.io/platform/current/installation/versions-interoperability.html
