@@ -30,3 +30,6 @@ ReflectionAvroSerde
 ![image](https://user-images.githubusercontent.com/37034642/116643045-c895f900-a9a2-11eb-882e-cdfc4f1d7c71.png)
 
 KafkaAvroSerializer validate the schema when serializing, throw SerializationExeception when it is invalid
+
+# Kafka community version vs confluent version
+https://docs.confluent.io/platform/current/installation/versions-interoperability.html
