@@ -43,5 +43,10 @@ Tip: if in doubt, use 30 partitions per topic. This is a good number because (a)
 ### build and extend docker image
 https://docs.confluent.io/platform/current/installation/docker/development.html#extending-images
 
+### integrate with schema registry
+https://docs.confluent.io/platform/current/schema-registry/connect.html#
+
 # Kafka community version vs confluent version
 https://docs.confluent.io/platform/current/installation/versions-interoperability.html
+
+
