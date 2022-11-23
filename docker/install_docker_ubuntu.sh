@@ -26,3 +26,6 @@ echo "####################################Launch docker#########################
 sudo systemctl start docker
 docker compose version
 docker version
+
+echo "####################################setup user group and permssion####################################"
+sudo usermod -aG docker $USER && newgrp docker
