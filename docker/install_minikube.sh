@@ -23,3 +23,8 @@ minikube status
 echo "###################################Verify the Kubernetes version, node status and cluster info###################################"
 kubectl cluster-info
 kubectl get nodes
+
+echo "###################################check addon, enable kube dashboard/ingress###################################"
+minikube addons list
+minikube addons enable dashboard
+minikube addons enable ingress
